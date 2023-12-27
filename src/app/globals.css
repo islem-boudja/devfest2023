@@ -258,7 +258,8 @@
 
 .sign-in-card {
   padding-top: 10% !important;
-  color:white
+  color:white;
+  height: 100%;
 }
 
 .sign-in-card > h1 {

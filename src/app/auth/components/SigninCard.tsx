@@ -2,21 +2,36 @@
 import { handleLogin } from '@/lib/api';
 import React from 'react'
 import { useState  } from 'react';
+import { useRouter } from 'next/navigation'
 export default function SigninCard({toggleCard}: {toggleCard: any}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const router = useRouter();
+
   const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    const body = {
-      email: e.target.email.value,
-      password: e.target.password.value,
-    };
-    const res = await handleLogin(body.email, body.password);
-    console.log(res);
+      e.preventDefault();
+      const body = {
+          email,
+          password,
+      };
+      try {
+          const res = await handleLogin(body.email, body.password);
+          console.log(res);
+          // Check for successful login
+          if (res) {
+              router.push('/generate'); // Redirect to '/generate' upon successful login
+          } else {
+              // Handle unexpected responses from handleLogin
+              return alert('Login failed.');
+          }
+      } catch (error: any) {
+          // Handle errors thrown within handleLogin
+          return alert(error.message || 'An error occurred during login.');
+      }
   }
-  
+
   return (
-    <div className={`sign-in-card rounded-xl w-1/2 h-full min-h-90 bg-violet-900 px-16`}>
+    <div className={`sign-in-card rounded-xl w-1/2 h-full bg-violet-900 px-16`}>
         <h1 className='text-white font-bold mb-0'>Sign In</h1>
         <p>Please login to continue to your account.</p>
         <form className='sign-in-form' onSubmit={(e) => handleSubmit(e)}>
