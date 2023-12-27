@@ -31,13 +31,13 @@ const Navbar = () => {
       </div>
       <div className=" flex items-center justify-center gap-3 text-primary-color ">
         <Link
-          href="/SignIn"
+          href="/auth"
           className="  rounded-2xl  px-4 py-2 my-4 font-medium border-2 border-transparent hover:border-primary-color  transition duration-300 ease-in-out"
         >
           log in
         </Link>
         <Link
-          href="/"
+          href="/auth"
           className="border-primary-color border-2 rounded-2xl  px-4 py-2 my-4 font-medium bg-primary-color text-gray-900 transition duration-300 ease-in-out"
         >
           sign in

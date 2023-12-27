@@ -36,7 +36,7 @@ const options = [
       "Taleo transforms your text prompts into captivating narratives. Input your ideas, and watch as AI breathes life into stories, effortlessly combining words to create a unique and immersive storytelling experience.",
   },
   {
-    href: "/generate/image-to-story",
+    href: "/generate/text-to-image-and-story",
     title: "generate a story and a picture from text prompts",
     descreption:
       "Taleo's innovative text-to-image feature brings your narratives to life with visual flair. Simply provide a text prompt, and witness as Taleo generates stunning images to complement your story. Immerse yourself in the fusion of words and visuals, enhancing the storytelling experience like never before.",

@@ -5,11 +5,11 @@ import Services from "./../components/Services";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Navbar />
       <Hero />
       <SecondSection />
       <Services />
-    </main>
+    </>
   );
 }

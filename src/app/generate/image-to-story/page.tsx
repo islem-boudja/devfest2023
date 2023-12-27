@@ -1,6 +1,7 @@
 import ButtonArrow from "@/components/ButtonWrapper";
 import Title from "@/components/Title";
 import Image from "next/image";
+import FileUpload from "@/components/FileUpload";
 export default function Home() {
   return (
     <main className=" h-screen bg-backgound-color generate-page relative overflow-hidden ">
@@ -33,10 +34,7 @@ export default function Home() {
               Taleo's image processing technology elevate your narrative,
               turning each moment captured into a storytelling masterpiece.
             </p>
-            <ButtonArrow
-              text="upload your image"
-              href="/generate/image-to-story"
-            />
+            <FileUpload />
           </div>
         </div>
       </div>

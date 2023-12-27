@@ -19,7 +19,7 @@ const FourthSection = () => {
         data-aos="zoom in"
       >
         <Title title="Intuitive text crafting" />
-        <p className=" w-52 ">
+        <p className=" w-52 font-sans">
           Embark on a journey of storytelling simplicity with Taleo's intuitive
           text input. Effortlessly create narratives by entering keywords,
           allowing our intelligent system to weave them into compelling stories
