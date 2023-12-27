@@ -1,22 +1,22 @@
 "use client";
-import { useState, ChangeEvent } from "react";
+import { useState } from "react";
 
-const FileUpload: React.FC = () => {
-  const [file, setFile] = useState<File | null>(null);
+const ImageUpload = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
 
-  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const selectedFile = e.target.files && e.target.files[0];
-    setFile(selectedFile || null);
+  const handleFileChange = (e: any) => {
+    const file = e.target.files[0];
+    setSelectedFile(file);
   };
 
   const handleUpload = async () => {
-    if (!file) {
+    if (!selectedFile) {
       console.error("No file selected");
       return;
     }
 
     const formData = new FormData();
-    formData.append("image", file);
+    formData.append("image", selectedFile);
 
     try {
       const response = await fetch(
@@ -27,19 +27,25 @@ const FileUpload: React.FC = () => {
         }
       );
 
-      // Handle the response as needed
-      console.log("Upload successful", response);
-    } catch (error) {
-      console.error("Error uploading file", error);
+      if (response.ok) {
+        console.log("Image uploaded successfully");
+        const res = await response.json();
+        console.log(res);
+      } else {
+        console.error("Failed to upload image");
+      }
+    } catch (error: any) {
+      console.error("Error uploading image:", error.message);
     }
   };
 
   return (
     <div>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
+      <label htmlFor="image">Choose an image:</label>
+      <input type="file" id="image" name="image" onChange={handleFileChange} />
+      <button onClick={handleUpload}>Upload Image</button>
     </div>
   );
 };
 
-export default FileUpload;
+export default ImageUpload;
