@@ -1,10 +1,20 @@
+"use client";
+import { useEffect } from "react";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+const ButtonArrow = ({ text, href }: { text: string; href: string }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
 
-const ButtonArrow = (text: { text: string }) => {
   return (
     <Link
-      href="#_"
-      className="relative w-fit z-50  inline-flex items-center px-16 py-3 overflow-hidden text-md font-medium text-primary-color border-2 border-primary-color rounded-xl hover:text-gray-900 group hover:bg-gray-50"
+      data-aos="zoom-in"
+      href={href}
+      className="relative w-fit z-50  inline-flex items-center px-16 py-3 overflow-hidden text-md font-medium text-primary-color border-2 border-primary-color rounded-2xl hover:text-gray-900 group hover:bg-gray-50"
     >
       <span className="absolute left-0 block w-full h-0 transition-all bg-primary-color opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
       <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
@@ -23,7 +33,7 @@ const ButtonArrow = (text: { text: string }) => {
           ></path>
         </svg>
       </span>
-      <span className="relative">{text.text}</span>
+      <span className="relative">{text}</span>
     </Link>
   );
 };

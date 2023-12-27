@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
-        <Hero />
-        <SecondSection />
-        <Services />
-      </main>
+      <Hero />
+      <SecondSection />
+      <ThirdSection />
+      <FourthSection />
+      <Services />
     </>
   );
 }
