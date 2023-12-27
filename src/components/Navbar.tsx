@@ -14,13 +14,13 @@ const Navbar = () => {
       </div>
       <div className=" flex items-center gap-1 text-primary-color">
         <Link
-          href="/about"
+          href="/auth"
           className="border-primary-color border-2 rounded-2xl  px-4 py-2 mt-6 font-medium hover:bg-primary-color hover:text-gray-900 transition duration-300 ease-in-out"
         >
           log in
         </Link>
         <Link
-          href="/about"
+          href="/auth"
           className="border-primary-color border-2 rounded-2xl  px-4 py-2 mt-6 font-medium hover:bg-primary-color hover:text-gray-900 transition duration-300 ease-in-out"
         >
           sign in

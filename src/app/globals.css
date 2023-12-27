@@ -237,3 +237,77 @@
   transform: translate(-33%, 40%);
   z-index: 0;
 }
+
+.auth-page{
+  background-color: #141031;
+}
+
+.sign-in-card {
+  background-color: #262150;
+}
+
+.auth-page > h4 {
+  font-size: 24px;
+}
+
+.auth-main {
+  background-image: url('../../public/images/auth-container-background.png');
+  background-size: cover;
+  min-height: 80vh;
+}
+
+.sign-in-card {
+  padding-top: 10% !important;
+  color:white
+}
+
+.sign-in-card > h1 {
+  font-size: 24px;
+  color: #F5E8C7;
+}
+
+.sign-in-card > p {
+  color: #C8C8C8;
+  font-size: 12px;
+}
+
+.sign-in-form input:not(.check-sign-in) {
+  background-color: #262150;
+  border-width: 0.5px;
+  border-color: white;
+  font-size: 16px;
+  width: 18rem;
+  outline: none;
+}
+
+.sign-in-form input:focus {
+  border-color: #F5E8C7;
+}
+
+.sign-in-btn {
+  background-color: #367AFF;
+  font-size: 18px;
+}
+
+.check-sign-in {
+  color: #C8C8C8;
+  font-size: 12px;
+}
+
+.google-auth-sep > p {
+  background-color: #262150;
+  font-size: 14px;
+  width: 25px;
+}
+
+.google-auth-btn {
+  border-color: white;
+  font-size: 16px;
+  width: 18rem;
+  margin-top: -30px !important;
+  outline: none;
+}
+
+.sign-up-card {
+  padding-top: 50px !important;
+}

@@ -23,9 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true} cz-shortcut-listen>
       <body className={cn(" relative", roboto.className)}>
-        <Navbar />
         {children}
       </body>
     </html>

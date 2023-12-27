@@ -14,7 +14,7 @@ const Hero = () => {
         <h1 className={cn(" text-6xl font-bold", eb_Garamond.className)}>
           Tell your story in one place
         </h1>
-        <p className=" text-xl font-medium max-w-xl">
+        <p className=" text-xl font-medium max-w-xl text-center">
           Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
           suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices
           amet, dui sit suspendisse.
